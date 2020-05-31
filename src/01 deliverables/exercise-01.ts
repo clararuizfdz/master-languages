@@ -7,34 +7,34 @@ const listPersons = ["Ana","Maria","Antonio", "Pedro"];
 // Implementa una función head (inmutable), tal que, dado un array como entrada
 // extraiga y devuelva su primer elemento. Utiliza destructuring
 
-const head = ([first]: number[]|string[]) => first;
-console.log("head", head(listNumbers));
-console.log("head", head(listPersons));
+const head = <T>([first]: T[]) => first;
+console.log("Head:", head(listNumbers));
+console.log("Head:", head(listPersons));
 
 // ----------------------------Tail------------------------------------------
 // Implementa una función tail (inmutable), tal que, dado un array como entrada 
 // devuelta todos menos el primer elemento. Utiliza rest operator.
 
-const tail = ([,...elements]: number[]|string[]) => elements;
-console.log("Tail", tail(listPersons));
-console.log("Tail", tail(listNumbers));
+const tail = <T>([,...elements]: T[]) => elements;
+console.log("Tail;", tail(listPersons));
+console.log("Tail:", tail(listNumbers));
 
 // ----------------------------Init------------------------------------------
 // Implementa una función init (inmutable), tal que, dado un array como 
 // entrada devuelva todos los elementos menos el último. 
 // Utiliza los métodos que ofrece Array.prototype.
 
-const init = (items: number[]|string[]) =>{   
+const init = <T>(items: T[]) =>{   
     return items.slice(0,-1);
 }
-console.log("Init", init(listNumbers));
-console.log("Init", init(listPersons));
+console.log("Init:", init(listNumbers));
+console.log("Init:", init(listPersons));
 
 // ----------------------------Last------------------------------------------
 // Implementa una función last (inmutable), tal que, dado un array como 
 // entrada devuelva el último elemento.
-const last = (items: number[]|string[]) =>{   
+const last = <T>(items: T[]) =>{   
     return items[items.length-1];
 }
-console.log("Last", last(listNumbers));
-console.log("Last", last(listPersons));
+console.log("Last:", last(listNumbers));
+console.log("Last:", last(listPersons));
