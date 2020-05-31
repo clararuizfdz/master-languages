@@ -18,7 +18,7 @@ const books: Library = [
     { title: titleDevastacion, isRead: true },
 ]
 
-function isBookRead(books: Library, titleToSearch: string): boolean {
+const isBookRead= (books: Library, titleToSearch: string): boolean => {
     const book = books.find(x => x.title === titleToSearch);
     return book ? book.isRead : false;    
 }
