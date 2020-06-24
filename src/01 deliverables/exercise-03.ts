@@ -38,15 +38,16 @@ console.log("CloneDeep:", cloneDeep(maria));
 // y target, devuelva un nuevo objeto con todas las propiedades de target
 // y de source, y en caso de propiedades con el mismo nombre, source
 // sobreescribe a target.
-const a = { name: "Maria", surname: "Ibañez", country: "SPA" };
-const b = { name: "Luisa", age: 31, married: true };
+
+const aMerge = { name: "Maria", surname: "Ibañez", country: "SPA" };
+const bMerge = { name: "Luisa", age: 31, married: true };
 
 const merge = <T, G>(source: T, target: G): T & G => ({ ...target, ...source });
-console.log("Merge:", merge(a, b));
+console.log("Merge:", merge(aMerge, bMerge));
 
 const mergeDeep = <T, G>(source: T, target: G): T & G => {
   const sourceDeepClone = cloneDeep(source);
   const targetDeepClone = cloneDeep(target);
   return { ...targetDeepClone, ...sourceDeepClone };
 };
-console.log("MergeDeep:", mergeDeep(a, b));
+console.log("MergeDeep:", mergeDeep(aMerge, bMerge));
