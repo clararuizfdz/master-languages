@@ -20,7 +20,7 @@ import "./02 challenges/exercise.js";
 import "./02 challenges/consoleTraces.js";
 import "./02 challenges/deepAccess.js";
 import "./02 challenges/flattenArray.js";
-
+import "./02 challenges/memoization.js";
 
 
 console.log("Welcome to Exercises Playground.");
